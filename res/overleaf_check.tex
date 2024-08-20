@@ -1,0 +1,22 @@
+\makeatletter
+\begingroup\endlinechar=-1\relax
+       \everyeof{\noexpand}%
+       \edef\x{\endgroup\def\noexpand\homepath{%
+         \@@input|"kpsewhich --var-value=HOME" }}\x
+\makeatother
+
+\def\overleafhome{/tmp}
+
+% change as appropriate
+%https://tex.stackexchange.com/questions/384066/how-can-my-latex-files-detect-if-theyre-being-compiled-on-overleaf
+% \documentclass{article}
+% \begin{document}
+% HOME: \texttt{\homepath}.
+
+% \ifx\homepath\overleafhome
+%  Overleaf.
+% \else
+%  Not Overleaf.
+% \fi
+
+% \end{document}

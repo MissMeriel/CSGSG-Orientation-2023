@@ -1,0 +1,32 @@
+
+\usepackage{res/beamerouterthememodsplit}
+% \useoutertheme{split}
+\useinnertheme{circles}
+\usecolortheme{whale}
+\usecolortheme{orchid}
+
+\setbeamerfont{block title}{size={}}
+
+
+
+
+
+% Page Numbering
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+	\oldmacro\hfill%
+	\insertframenumber\,/\,\inserttotalframenumber}
+
+\def\note#1{\ifhidenotes\relax\else\textcolor{blue}{#1}\fi}
+\def\anim#1{\ifhideanims\relax\else{#1}\fi}
+
+\setbeamertemplate{naviagation symbols}{}
+\setbeamertemplate{frametitle}{}
+
+% \setbeamertemplate{frametitle}{%
+% 	\nointerlineskip%
+% 	\begin{beamercolorbox}[wd=\paperwidth,ht=1.4ex,dp=0.6ex]{frametitle}
+% 		\hspace*{1ex}\insertframetitle%
+% 	\end{beamercolorbox}%
+% }
